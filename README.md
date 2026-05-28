@@ -2,6 +2,12 @@
 
 A small in-browser breadboard you can click around on: place jumper wires between holes on a familiar half-board layout.
 
+## Try online
+
+**https://trolle6.github.io/brad-sboeard/**
+
+(GitHub Pages deploys automatically on push to `main`.)
+
 ## Run locally
 
 Open `index.html` in a browser, or serve the folder:
