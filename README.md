@@ -6,7 +6,13 @@ A small in-browser breadboard you can click around on: place jumper wires betwee
 
 **https://trolle6.github.io/brad-sboeard/**
 
-(GitHub Pages deploys automatically on push to `main`.)
+### One-time setup (if the link 404s)
+
+1. Open [repo Settings → Pages](https://github.com/trolle6/brad-sboeard/settings/pages)
+2. Under **Build and deployment**, set **Source** to **Deploy from a branch**
+3. **Branch:** `gh-pages` · **Folder:** `/ (root)` · Save
+
+The site should appear within a minute or two. Pushes to `gh-pages` update the live site; `main` also has a GitHub Actions workflow once you switch the source to **GitHub Actions** instead.
 
 ## Run locally
 
