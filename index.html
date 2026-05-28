@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Breadboard Sim</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="toolbar">
+    <h1>Breadboard Sim</h1>
+    <p class="hint">Click two holes to run a jumper wire. <kbd>Esc</kbd> cancels.</p>
+    <div class="tools">
+      <button type="button" class="tool active" data-tool="wire" title="Jumper wire">Wire</button>
+      <button type="button" class="tool" data-tool="erase" title="Remove wire on hole">Erase</button>
+      <button type="button" id="clear-wires">Clear wires</button>
+    </div>
+  </header>
+
+  <main>
+    <div id="board-wrap">
+      <svg id="board" viewBox="0 0 920 340" aria-label="Breadboard">
+        <defs>
+          <pattern id="hole-grid" width="20" height="20" patternUnits="userSpaceOnUse">
+            <circle cx="10" cy="10" r="1.2" fill="#2a2a2a" opacity="0.15" />
+          </pattern>
+        </defs>
+        <rect class="board-body" x="10" y="10" width="900" height="320" rx="8" />
+        <rect class="board-texture" x="10" y="10" width="900" height="320" rx="8" fill="url(#hole-grid)" />
+        <rect class="center-groove" x="430" y="50" width="60" height="240" rx="4" />
+        <g id="rails"></g>
+        <g id="holes"></g>
+        <g id="wires"></g>
+        <g id="preview"></g>
+      </svg>
+    </div>
+    <aside class="status">
+      <div id="status-text">Pick a hole to start a wire.</div>
+      <div class="legend">
+        <span class="swatch rail-pos"></span> + rail
+        <span class="swatch rail-neg"></span> − rail
+        <span class="swatch row"></span> row bus (a–e / f–j)
+      </div>
+    </aside>
+  </main>
+
+  <script src="breadboard.js"></script>
+</body>
+</html>
